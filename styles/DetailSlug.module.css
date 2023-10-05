@@ -26,7 +26,7 @@ text-align: center;
 }
 .media_poster {
     object-fit: contain;
-    background-color: blanchedalmond;
+    background-color: rgb(26, 26, 44);
     align-self: center;
 }
 .media_description{
