@@ -37,6 +37,8 @@ function MovieDatabase()
 
     const redirectPage = (id)=>{
         setId(id)
+        localStorage.setItem('myContextId', id);
+        console.log("set localStorage id"+id)
         
         router.push({
             pathname: '/movie_details/info', 
