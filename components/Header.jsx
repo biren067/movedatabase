@@ -25,7 +25,7 @@ function Header() {
             <Link href='/upcoming_bollywood'>Upcoming</Link>
           </div>
           <div className={isLinkActive('/movie_database') ? `${styles.menu}` : ''}>
-            <Link href='/movie_database'>Movies Record</Link></div>
+            <Link href='/movie_database'>Collections</Link></div>
 
         </div>
       </div>
