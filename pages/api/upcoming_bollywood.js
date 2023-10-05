@@ -1,20 +1,11 @@
+
 import movieData from '@/data/tableData/movieData'
 function getCurrentDate() {
   const currentDate = new Date();
-
   const year = currentDate.getFullYear();
   const month = String(currentDate.getMonth() + 1).padStart(2, "0");
   const day = String(currentDate.getDate()).padStart(2, "0");
 
-  return `${year}-${month}-${day}`;
-}
-
-function getDateTwoMonthsAgo() {
-  const currentDate = new Date();
-  currentDate.setMonth(currentDate.getMonth() - 2);
-  const year = currentDate.getFullYear();
-  const month = String(currentDate.getMonth() + 1).padStart(2, "0");
-  const day = String(currentDate.getDate()).padStart(2, "0");
   return `${year}-${month}-${day}`;
 }
 
@@ -31,10 +22,11 @@ export default function handler(req, res) {
     && item.starring !== null
     && item.starring !== "None" 
     && item.starring.length > 0 
-    && item.release_date <= getCurrentDate() 
-    && item.release_date >= getDateTwoMonthsAgo() 
+    && item.release_date >= getCurrentDate() 
   )
+
   }
   );
-  res.status(200).json(filteredData);   
+  res.status(200).json(filteredData);
+   
 }
