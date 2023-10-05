@@ -47,7 +47,7 @@ function MovieDatabase()
         //   accessor:'id'},
         { Header:'title',
           accessor:'title'},
-        { Header:'poster_link',
+        { Header:'Poster',
           accessor:'poster_link',
           Cell: ({ cell: { value } }) => (
             <div className={`${styles['table-row']}`}>
