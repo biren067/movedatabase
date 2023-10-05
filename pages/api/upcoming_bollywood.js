@@ -27,6 +27,11 @@ export default function handler(req, res) {
 
   }
   );
+  function getRandom() {
+    return Math.random() - 0.5;
+  }
+
+  filteredData.sort(getRandom);
   res.status(200).json(filteredData);
    
 }

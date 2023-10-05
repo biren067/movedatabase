@@ -14,5 +14,13 @@ export default function handler(req, res) {
     item.starring.length > 0 
   );
 
+  // Function to generate a random number between 0 and 1
+  function getRandom() {
+    return Math.random() - 0.5;
+  }
+
+  // Shuffle the filteredData array randomly
+  filteredData.sort(getRandom);
+  
   res.status(200).json(filteredData);
 }
