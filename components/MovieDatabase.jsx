@@ -158,7 +158,7 @@ function MovieDatabase()
                                 {
                                     row.cells.map((cell,index)=>{
                                         return <td  className={`${styles.moviedatabase__columnCell}`}key={index} {...cell.getCellProps()}>
-                                      {cell.column.id === 'starring' || cell.column.id === 'produced_by'?cell.value.join(", "):
+                                      {cell.column.id === 'starring' || cell.column.id === 'produced_by'? cell.value.join(", "):
                                           (cell.render('Cell'))
                                       }
                                        {/* {cell.render('Cell')} */}
