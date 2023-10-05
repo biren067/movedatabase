@@ -14,14 +14,12 @@ function MovieDetails() {
     if (st!=undefined && st!="None"){
     for (let i = 0; i < st.length; i++) {
     separatedList += st[i];
-    
     if (i < st.length -1) {
         separatedList += ', ';
     }
     }
-    
     return separatedList
-}
+  }
   }
    useEffect(() => {
      storedIdRef.current = localStorage.getItem('myContextId');
