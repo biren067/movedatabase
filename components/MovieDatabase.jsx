@@ -67,40 +67,40 @@ function MovieDatabase()
         },
         { 
             Header:'Director',
-            accessor:'Directed by'
+            accessor:'directed_by'
         },
     { Header:'Screen Play',
-      accessor:'Screenplay by'},
+      accessor:'screenplay_by'},
     { Header:'Dialogue',
-      accessor:'Dialogues by'},
+      accessor:'dialogues_by'},
     { Header:'Story',
-      accessor:'Story by'},
+      accessor:'story_by'},
     { Header:'Producers',
-      accessor:'Produced by'},
-    { Header:'Actor/Actress',
-      accessor:'Starring'},
+      accessor:'produced_by'},
+    // { Header:'Actor/Actress',
+    //   accessor:'Starring'},
     { Header:'Cinematography',
-      accessor:'Cinematography'},
+      accessor:'cinematography'},
     { Header:'Edited',
-      accessor:'Edited by'},
+      accessor:'edited_by'},
     { Header:'Musics',
-      accessor:'Music by'},
+      accessor:'music_by'},
     { Header:'Production Company',
-      accessor:'Productioncompany'},
+      accessor:'productioncompany'},
     { Header:'Distributors',
-      accessor:'Distributed by'},
+      accessor:'distributed_by'},
     { Header:'Release date',
-      accessor:'Release date'},
+      accessor:'release_date'},
       { Header:'Running time',
-      accessor:'Running time'},
+      accessor:'running_time'},
       { Header:'Country',
-      accessor:'Country'},
+      accessor:'country'},
       { Header:'Language',
-      accessor:'Language'},
+      accessor:'language'},
       { Header:'Budget',
-      accessor:'Budget'},
+      accessor:'budget'},
       { Header:'Box office',
-      accessor:'Box office'},
+      accessor:'box_office'},
       ] 
     const Columns = useMemo(()=>columns,[])
     const tableInstance = useTable({columns:Columns,data: filteredData},useGlobalFilter,useSortBy,usePagination)
@@ -134,9 +134,9 @@ function MovieDatabase()
             <table {...getTableProps()} className={`${styles.moviedatabase__table}`} style={{ border: '1px solid black' }}>
                 <thead className={` ${styles.moviedatabase__header}`}>
                     {headerGroups.map((headerGroup,index)=>(
-                        <tr key={index} {...headerGroup.getHeaderGroupProps()}>
+                        <tr key={index} {...headerGroup.getHeaderGroupProps()} >
                             {headerGroup.headers.map((column,index)=>(
-                                <th key={index} {...column.getHeaderProps(column.getSortByToggleProps())}>
+                                <th key={index} {...column.getHeaderProps(column.getSortByToggleProps())} >
                                     {column.render('Header')}
                                     <span>
                                         {column.isSorted?(column.isSortedDesc?<AiFillDownCircle/>:<AiFillUpCircle/>):''}

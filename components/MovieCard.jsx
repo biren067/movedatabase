@@ -11,7 +11,7 @@ function MovieCard({item}) {
     const setIdForMovie=({globalid})=>{
         setId(globalid)
         localStorage.setItem('myContextId', globalid);
-        console.log("global Id::",globalid)
+        
     }
   return (
     <> <div  className={`lg:1/2 md:w-1/4 w-full ${styles.moviecard}`}>

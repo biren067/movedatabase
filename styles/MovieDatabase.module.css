@@ -59,7 +59,7 @@ padding: auto;
 .moviedatabase__header{
     background-color: rgb(66, 66, 205);
     position: sticky;
-    border-top: 1px solid #4a92f6;
+    /* border-top: 5    px solid #4a92f6; */
     top:0;
     z-index: 100;
 }
