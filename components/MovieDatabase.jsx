@@ -47,7 +47,7 @@ function MovieDatabase()
     const columns = [
         // { Header:'id',
         //   accessor:'id'},
-        { Header:'title',
+        { Header:'Name',
           accessor:'title'},
         { Header:'Poster',
           accessor:'poster_link',
@@ -64,7 +64,7 @@ function MovieDatabase()
           ),
         },
         { 
-            Header:'Starring',
+            Header:'Stars',
             accessor:'starring'
         },
         { 
