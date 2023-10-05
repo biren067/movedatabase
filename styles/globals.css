@@ -7,6 +7,10 @@
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
 }
+body{
+  background-color:rgb(26, 26, 44) ;
+  color:white;
+}
 
 @media (prefers-color-scheme: dark) {
   :root {
