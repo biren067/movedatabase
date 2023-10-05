@@ -36,7 +36,7 @@ function ReleasedBollywood() {
 
   const totalPages = Math.ceil(filteredData.length / itemsPerPage);
   const pageNumbers = [];
-  const maxPageButtons = 5;
+  const maxPageButtons = 4;
 
   let startPage = currentPage - Math.floor(maxPageButtons / 2);
   startPage = Math.max(startPage, 1);

@@ -47,7 +47,7 @@ function MovieList() {
   // Calculate the range of page numbers to display
   const totalPages = Math.ceil(data.length / itemsPerPage);
   const pageNumbers = [];
-  const maxPageButtons = 5;
+  const maxPageButtons = 4;
 
   let startPage = currentPage - Math.floor(maxPageButtons / 2);
   startPage = Math.max(startPage, 1);
