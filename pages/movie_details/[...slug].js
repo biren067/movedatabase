@@ -7,6 +7,7 @@ import Image from 'next/image'
 
 function MovieDetails() {
   const [filteredData,setFilteredData] = useState([])
+  const [isLoading, setIsLoading] = useState(true); 
   let { id } = fetchId();
   const storedIdRef = useRef(id); 
   const string_with_comman=(st)=>{
@@ -29,8 +30,11 @@ function MovieDetails() {
             const response = await fetch(url); 
             const data = await response.json();
             setFilteredData(data);
+            setIsLoading(false);
+ 
         } catch (error) {
             console.error('Error fetching data:', error);
+            setIsLoading(false);
         }
         };
 

@@ -157,10 +157,9 @@ function MovieDatabase()
                             
                                 {
                                     row.cells.map((cell,index)=>{
+                                      const cellValue = cell.value || '';
                                         return <td  className={`${styles.moviedatabase__columnCell}`}key={index} {...cell.getCellProps()}>
-                                      {cell.column.id === 'starring' || cell.column.id === 'produced_by'? cell.value.join(", "):
-                                          (cell.render('Cell'))
-                                      }
+                              {cell.column.id === 'starring' || cell.column.id === 'produced_by'? (cellValue===undefined || cellValue === null || cellValue==='' || cellValue==="None" ? cell.render('Cell'):cellValue.join(", ")):cell.render('Cell')}
                                        {/* {cell.render('Cell')} */}
                                        </td>
                                     })
