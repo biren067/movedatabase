@@ -12,7 +12,7 @@ function Header() {
 
   return (
     <>
-      <div className='flex justify-between items-center  py-3 bg-blue-900 text-cyan-300 z-50 '>
+      <div className='flex justify-between items-center px-2 py-3 bg-blue-900 text-cyan-300 z-50 sm:font-sans '>
 
         <div className='flex justify-center items-center gap-5 mx-auto'>
           <div className={isLinkActive('/') ? `${styles.menu}` : ''}>
@@ -25,7 +25,7 @@ function Header() {
             <Link href='/upcoming_bollywood'>Upcoming</Link>
           </div>
           <div className={isLinkActive('/movie_database') ? `${styles.menu}` : ''}>
-            <Link href='/movie_database'>Movies Database</Link></div>
+            <Link href='/movie_database'>Movies Record</Link></div>
 
         </div>
       </div>
