@@ -28,6 +28,9 @@ function Header() {
             <Link href='/movie_database'>Collections</Link></div>
 
         </div>
+        <div>
+          under development mode
+        </div>
       </div>
     </>
   )
